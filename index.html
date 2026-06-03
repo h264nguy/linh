@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ngọc Linh Trần Hoàng</title>
+  <meta name="description" content="A personal black and white profile website dedicated to Ngọc Linh Trần Hoàng." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#home">Linh</a>
+
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#letter">Message</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="hero-copy reveal">
+        <h1>Ngọc Linh<br />Trần Hoàng</h1>
+        <div class="line"></div>
+        <p class="hero-text">
+          A warm presence, a lovely smile, and the kind of energy that makes every trip brighter.
+        </p>
+        <div class="hero-actions">
+          <a class="btn dark" href="#gallery">View Her Photos</a>
+          <a class="btn light" href="#about">Read About Linh</a>
+        </div>
+      </div>
+
+      <div class="hero-card reveal">
+        <div class="photo-frame main-photo" id="heroPhoto">
+          <img src="assets/img/linh-main.jpg" alt="Main photo of Linh" />
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-grid section">
+      <article class="mini-card reveal">
+        <span class="icon">☺</span>
+        <h3>Cheerful</h3>
+        <div class="tiny-line"></div>
+        <p>Always brings bright and uplifting energy.</p>
+      </article>
+
+      <article class="mini-card reveal">
+        <span class="icon">☁</span>
+        <h3>Easy to Talk To</h3>
+        <div class="tiny-line"></div>
+        <p>Warm, approachable, and comforting to be around.</p>
+      </article>
+
+      <article class="mini-card reveal">
+        <span class="icon">♨</span>
+        <h3>Food Lover</h3>
+        <div class="tiny-line"></div>
+        <p>Loves Japanese food, trying delicious places, and will probably choose pork over beef without thinking twice.</p>
+      </article>
+
+      <article class="mini-card reveal">
+        <span class="icon">♡</span>
+        <h3>Adorable</h3>
+        <div class="tiny-line"></div>
+        <p>Sweet, charming, and effortlessly lovable.</p>
+      </article>
+    </section>
+
+    <section id="about" class="about section">
+      <div class="about-text reveal">
+        <p class="eyebrow">About Linh</p>
+        <h2>A gentle soul with kindness inside and out.</h2>
+        <div class="line"></div>
+        <p>
+          Ngọc Linh Trần Hoàng can be a little shy when meeting new people, but that quiet side only makes
+          her warmth feel even more special once you get to know her. She is easy to talk to, thoughtful,
+          and the kind of person who makes others feel comfortable just by being around. More than anything,
+          Linh is truly kind both inside and out — gentle, caring, and sincere in a way that people can
+          genuinely feel. She has a lovely charm, a soft heart, and a presence that makes ordinary moments
+          feel brighter, calmer, and more meaningful.
+        </p>
+      </div>
+    </section>
+
+    <section id="gallery" class="section gallery-section">
+      <div class="section-heading gallery-heading reveal">
+        <p class="eyebrow gallery-eyebrow">Photo Gallery</p>
+        <h2>Our favourite memories.</h2>
+      </div>
+
+      <div class="gallery-controls reveal">
+        <label class="upload-btn big-upload">
+          Upload Photos
+          <input type="file" accept="image/*" multiple id="galleryInput" />
+        </label>
+      </div>
+
+      
+<div class="gallery-grid" id="galleryGrid">
+  <article class="gallery-item reveal visible clickable default-photo" data-default-index="0">
+    <div class="photo-frame">
+      <img src="assets/img/gallery-cherry-1.jpg" alt="Cherry blossom photo 1" />
+    </div>
+  </article>
+
+  <article class="gallery-item reveal visible clickable default-photo" data-default-index="1">
+    <div class="photo-frame">
+      <img src="assets/img/gallery-cherry-2.jpg" alt="Cherry blossom photo 2" />
+    </div>
+  </article>
+
+  <article class="gallery-item reveal visible clickable default-photo" data-default-index="2">
+    <div class="photo-frame">
+      <img src="assets/img/gallery-cherry-3.jpg" alt="Cherry blossom photo 3" />
+    </div>
+  </article>
+</div>
+    </section>
+
+    <section id="letter" class="section letter reveal">
+      <p class="eyebrow">Small Message</p>
+      <h2>For Linh</h2>
+      <p>
+        Never lose that cute, playful side that makes people smile so easily — it is one of the sweetest things about you.
+        Keep being soft-hearted, kind, and full of little happy energy, but also keep growing into the person you truly want to become.
+        Set goals that make you proud, chase the things that matter to you, and believe in yourself a little more every day.
+        You already have a beautiful heart, both inside and out, and the best version of you is still growing.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>♡ A profile dedicated to Linh ♡</p>
+  </footer>
+
+  <div class="modal" id="imageModal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <img id="modalImage" src="" alt="Preview image" />
+      <div class="modal-actions">
+        <button class="btn dark" id="modalRemoveBtn" type="button">Remove Photo</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
